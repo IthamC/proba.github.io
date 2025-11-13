@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - {{ asignatura.nombre }}</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Chat principal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="asignaturas.html" class="activo">Asignaturas</a></li>
+                <li><a href="recursos.html">Archivos</a></li>
+                <li><a href="chat.html">Chat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="chat-container">
+            <div class="chat-box">
+                {% for m in mensajes %}
+                <div class="mensaje">
+                    <strong>{{ m.nombre_usuario }}</strong> 
+                    <span class="hora">({{ m.fecha_envio.strftime('%d/%m %H:%M') }})</span>:
+                    <p>{{ m.mensaje }}</p>
+                </div>
+                {% else %}
+                <p>No hay mensajes todavía.</p>
+                {% endfor %}
+            </div>
+
+            <form method="POST" class="form-chat">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Instituto Técnico Superior</p>
+    </footer>
+</body>
+</html>
