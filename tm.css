@@ -1,0 +1,257 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #004b8d;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: #d9e9ff;
+    margin-top: 0.3rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 0.6rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #004b8d;
+}
+main {
+    padding: 2rem;
+}
+
+.bienvenida {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid-asignaturas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card h3 {
+    color: #004b8d;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #004b8d;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #0066cc;
+}
+
+footer {
+    text-align: center;
+    background: #e9ecef;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.chat-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.chat-box {
+    max-height: 400px;
+    overflow-y: auto;
+    background: #f8f9fb;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.mensaje {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.mensaje strong {
+    color: #004b8d;
+}
+
+.mensaje p {
+    margin: 0.2rem 0 0 0.5rem;
+}
+
+.hora {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.form-chat input,
+.form-chat textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-chat button {
+    margin-top: 0.8rem;
+    background: #004b8d;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-chat button:hover {
+    background: #0066cc;
+}
+
+/* ============================
+   ESTILOS PARA TEXTOS LARGOS
+   ============================ */
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    line-height: 1.7;
+    font-size: 17px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Títulos dentro del contenido */
+main h2, main h3, main h4 {
+    color: #2b4a6e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Estructura de los textos */
+main p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    color: #333;
+    letter-spacing: 0.2px;
+}
+
+/* Listas */
+main ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+main li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para los <details> de cada Eje */
+details {
+    background: #eef3fa;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #004b8d;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+summary {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #004b8d;
+    cursor: pointer;
+    padding: 0.3rem;
+}
+
+/* Secciones internas */
+section {
+    background: #fafcff;
+    padding: 1.4rem;
+    border-left: 4px solid #d0d9e6;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Separador visual entre ejes */
+.page-break {
+    height: 1px;
+    border-top: 1px dashed #ccc;
+    margin: 2.5rem 0;
+}
+
+/* Estilos específicos para PDF */
+@media print {
+    .page-break {
+        display: block;
+        page-break-before: always;
+    }
+
+    main {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    details[open] summary {
+        font-size: 1.4rem;
+    }
+}
+/* ============================
+   FIN DE ESTILOS PARA TEXTOS LARGOS
+   ============================ */
